@@ -1,17 +1,102 @@
-.relative {
+body {
+  height: 100vh;
+}
+
+.point-1 {
+  position: absolute;
+  left: 35%;
+  top: 35%;
+  width: 60px;
+  height: 60px;
+  background: red;
+  border-radius: 100%;
+}
+
+.point-2-a {
+  position: absolute;
+  left: 17.5%;
+  top: 17.5%;
+  width: 50px;
+  height: 50px;
+  background: red;
+  border-radius: 100%;
+}
+
+.point-2-b {
+  position: absolute;
+  left: 52.5%;
+  top: 52.5%;
+  width: 50px;
+  height: 50px;
+  background: red;
+  border-radius: 100%;
+}
+
+.point-3-a {
+  position: absolute;
+  left: 16%;
+  top: 16%;
+  width: 50px;
+  height: 50px;
+  background: red;
+  border-radius: 100%;
+}
+
+.point-3-b {
+  position: absolute;
+  left: 37.5%;
+  top: 37.5%;
+  width: 50px;
+  height: 50px;
+  background: red;
+  border-radius: 100%;
+}
+
+.point-3-c {
+  position: absolute;
+  left: 60.5%;
+  top: 60.5%;
+  width: 50px;
+  height: 50px;
+  background: red;
+  border-radius: 100%;
+}
+
+.dice {
+  left: 50%;
   position: relative;
+  width: 200px;
+  height: 200px;
+  background: white;
+  border-radius: 10px;
 }
 .absolute {
   position: absolute;
+  top: 0px;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  background: blue;
 }
 .fixed {
   position: fixed;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  background: green;
 }
 .static {
   position: static;
+  width: 200px;
+  height: 200px;
+  background: orange;
 }
 .sticky {
   position: sticky;
+  width: 200px;
+  height: 200px;
+  top: 0px;
+  background: yellow;
 }
 
 .parent {
@@ -19,4 +104,98 @@
   width: 100%;
   height: 100vh;
   background: gray;
+}
+
+.place-holder {
+  height: 600px;
+  width: 200px;
+  background: red;
+}
+
+.ball-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.ball1 {
+  z-index: 2;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  background-color: blue;
+  border-radius: 100%;
+}
+
+.ball2 {
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  left: 3%;
+  top: 3%;
+  position: absolute;
+  background-color: purple;
+  border-radius: 100%;
+}
+
+.ball3 {
+  z-index: 0;
+  width: 150px;
+  height: 150px;
+  left: 6%;
+  top: 6%;
+  position: absolute;
+  background-color: green;
+  border-radius: 100%;
+}
+
+#delay {
+  font-size: 30px;
+  background-color: blue;
+  transition-property: font-size background-color;
+  transition-duration: 4s;
+  transition-delay: 2s;
+}
+
+#delay:hover {
+  background-color: green;
+  font-size: 96px;
+}
+
+.box {
+  border-style: solid;
+  border-width: 1px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #0000ff;
+  transition: width 2s, height 2s, background-color 4s, transform 2s;
+}
+
+.box:hover {
+  background-color: #ffcccc;
+  width: 200px;
+  height: 200px;
+  transform: rotate(180deg);
+}
+
+.test-animate {
+  animation-duration: 5s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    transform: translateX(0%);
+  }
+
+  to {
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    transform: translateX(100%);
+  }
 }
